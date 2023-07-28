@@ -20,9 +20,6 @@ class Character:
         self.hp -= damage_amount
 
     def heal(self, heal_amount):
-        if self.get_hp() == 1000:
-            return
-
         if self.get_state() == DEAD:
             raise DeadCharacterCannotBeHealedException()
 
