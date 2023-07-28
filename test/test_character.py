@@ -24,3 +24,7 @@ def test_character_can_take_damage(alice):
     alice.take_damage(10)
 
     assert alice.get_hp() == 990
+
+
+def test_character_dies_when_hp_is_0(alice):
+    alice.take_damage(1000)
