@@ -48,3 +48,8 @@ def test_character_cannot_heal_after_dying(alice):
 
 def test_characters_start_at_level_1(alice):
     assert alice.get_level() == 1
+
+
+def test_characters_at_level_1_cannot_heal_above_1000(alice):
+    alice.heal(100)
+    assert alice.get_hp() == 1000
