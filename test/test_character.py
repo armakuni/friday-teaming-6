@@ -20,7 +20,5 @@ def test_character_starts_with_alive_state(alice):
     assert alice.get_state() == ALIVE
 
 
-def test_character_can_take_damage():
-    character = Character()
-
-    character.take_damage(10)
+def test_character_can_take_damage(alice):
+    alice.take_damage(10)
