@@ -62,15 +62,14 @@ def test_characters_at_level_1_cannot_heal_above_1000(alice):
 
 
 def test_level_is_2_after_1000_damage(alice):
-    alice.take_damage(900)
-    alice.heal(900)
-    alice.take_damage(100)
+    def take_1000_damage_and_heal_fully():
+        alice.take_damage(900)
+        alice.heal(900)
+        alice.take_damage(100)
+        alice.heal(10000)
 
+    take_1000_damage_and_heal_fully()
     assert alice.get_level() == 2
-    alice.heal(10000)
 
-    alice.take_damage(900)
-    alice.heal(900)
-    alice.take_damage(100)
-
+    take_1000_damage_and_heal_fully()
     assert alice.get_level() == 3
