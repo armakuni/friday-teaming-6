@@ -68,8 +68,6 @@ def test_level_is_2_after_1000_damage(alice):
         alice.take_damage(100)
         alice.heal(10000)
 
-    take_1000_damage_and_heal_fully()
-    assert alice.get_level() == 2
-
-    take_1000_damage_and_heal_fully()
-    assert alice.get_level() == 3
+    for i in range(2, 3):
+        take_1000_damage_and_heal_fully()
+        assert alice.get_level() == i
