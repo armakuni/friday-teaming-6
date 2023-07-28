@@ -32,9 +32,3 @@ class Character:
 
     def get_level(self):
         return int(self.lifetime_damage_amount / 1000) + 1
-        if self.lifetime_damage_amount >= 2000:
-            return 3
-        if self.lifetime_damage_amount >= 1000:
-            return 2
-
-        return 1
