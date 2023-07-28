@@ -59,3 +59,9 @@ def test_characters_at_level_1_cannot_heal_above_1000(alice):
     alice.heal(200)
 
     assert alice.get_hp() == MAX_HP
+
+
+def test_levels_up_taking_1000_damage_without_dying(alice):
+    alice.take_damage(900)
+    alice.heal(900)
+    alice.take_damage(900)
