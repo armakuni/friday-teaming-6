@@ -5,6 +5,7 @@ DEAD = 2
 class Character:
     def __init__(self) -> None:
         self.hp = 1000
+        self.state = ALIVE
 
     def get_hp(self):
         return self.hp
