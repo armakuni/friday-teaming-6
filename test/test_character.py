@@ -2,14 +2,17 @@ from character import *
 import pytest
 
 
+@pytest.fixture
+def alice():
+    return Character()
+
+
 def test_something():
     assert True
 
 
-def test_character_starts_with_1000_hp():
-    character = Character()
-
-    assert character.get_hp() == 1000
+def test_character_starts_with_1000_hp(alice):
+    assert alice.get_hp() == 1000
 
 
 def test_character_starts_with_alive_state():
