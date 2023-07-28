@@ -23,4 +23,4 @@ def test_character_starts_with_alive_state(alice):
 def test_character_can_take_damage(alice):
     alice.take_damage(10)
 
-    # assert alice.get_hp() == 990
+    assert alice.get_hp() == 990

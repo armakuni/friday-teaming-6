@@ -13,4 +13,4 @@ class Character:
         return ALIVE
 
     def take_damage(self, damage_amount):
-        return
+        self.hp -= damage_amount
