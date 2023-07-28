@@ -1,5 +1,6 @@
-from character import *
 import pytest
+
+from character import *
 
 
 @pytest.fixture
@@ -15,10 +16,8 @@ def test_character_starts_with_1000_hp(alice):
     assert alice.get_hp() == 1000
 
 
-def test_character_starts_with_alive_state():
-    character = Character()
-
-    assert character.get_state() == ALIVE
+def test_character_starts_with_alive_state(alice):
+    assert alice.get_state() == ALIVE
 
 
 def test_character_can_take_damage():
