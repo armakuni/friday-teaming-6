@@ -11,7 +11,7 @@ class Character:
         return self.hp
 
     def get_state(self):
-        return ALIVE
+        return self.state
 
     def take_damage(self, damage_amount):
         self.hp -= damage_amount
