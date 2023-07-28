@@ -30,3 +30,10 @@ def test_character_dies_when_hp_is_0(alice):
     alice.take_damage(1000)
 
     assert alice.get_state() == DEAD
+
+
+def test_character_can_heal(alice):
+    alice.take_damage(100)
+    alice.heal(10)
+
+    assert alice.get_hp() == 910

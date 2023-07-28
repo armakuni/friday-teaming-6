@@ -14,3 +14,6 @@ class Character:
 
     def take_damage(self, damage_amount):
         self.hp -= damage_amount
+
+    def heal(self, heal_amount):
+        self.hp += heal_amount
