@@ -53,3 +53,9 @@ def test_characters_start_at_level_1(alice):
 def test_characters_at_level_1_cannot_heal_above_1000(alice):
     alice.heal(100)
     assert alice.get_hp() == 1000
+
+    # cannot overheal
+    alice.take_damage(100)
+    alice.heal(200)
+
+    assert alice.get_hp() == 1000

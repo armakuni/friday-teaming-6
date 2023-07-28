@@ -27,6 +27,7 @@ class Character:
             raise DeadCharacterCannotBeHealedException()
 
         self.hp += heal_amount
+        self.hp = min(self.hp, 1000)
 
     def get_level(self):
         return 1
