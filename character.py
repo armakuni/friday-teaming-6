@@ -31,6 +31,8 @@ class Character:
         self.hp = min(self.hp, 1000)
 
     def get_level(self):
+        if self.lifetime_damage_amount >= 2000:
+            return 3
         if self.lifetime_damage_amount >= 1000:
             return 2
 
