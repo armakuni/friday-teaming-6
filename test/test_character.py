@@ -28,3 +28,5 @@ def test_character_can_take_damage(alice):
 
 def test_character_dies_when_hp_is_0(alice):
     alice.take_damage(1000)
+
+    assert alice.get_state() == DEAD

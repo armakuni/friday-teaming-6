@@ -10,10 +10,7 @@ class Character:
         return self.hp
 
     def get_state(self):
-        if self.hp <= 0:
-            return DEAD
-
-        return ALIVE
+        return DEAD if self.hp <= 0 else ALIVE
 
     def take_damage(self, damage_amount):
         self.hp -= damage_amount
