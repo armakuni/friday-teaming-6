@@ -15,3 +15,6 @@ class Character:
 
     def take_damage(self, damage_amount):
         self.hp -= damage_amount
+
+        if self.hp <= 0:
+            self.state = DEAD
