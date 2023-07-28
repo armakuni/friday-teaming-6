@@ -23,3 +23,6 @@ class Character:
         if self.get_state() == DEAD:
             raise DeadCharacterCannotBeHealedException()
         self.hp += heal_amount
+
+    def get_level(self):
+        return 1

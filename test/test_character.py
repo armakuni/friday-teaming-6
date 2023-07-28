@@ -44,3 +44,7 @@ def test_character_cannot_heal_after_dying(alice):
 
     with pytest.raises(DeadCharacterCannotBeHealedException):
         alice.heal(10)
+
+
+def test_characters_start_at_level_1(alice):
+    assert alice.get_level() == 1
