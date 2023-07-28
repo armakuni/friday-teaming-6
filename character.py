@@ -11,6 +11,7 @@ class DeadCharacterCannotBeHealedException(Exception):
 class Character:
     def __init__(self) -> None:
         self.hp = MAX_HP
+        self.lifetime_damage_amount = 0
 
     def get_hp(self):
         return self.hp
@@ -19,6 +20,7 @@ class Character:
         return DEAD if self.hp <= 0 else ALIVE
 
     def take_damage(self, damage_amount):
+        self.lifetime_damage_amount += damage_amount
         self.hp -= damage_amount
 
     def heal(self, heal_amount):
@@ -29,4 +31,7 @@ class Character:
         self.hp = min(self.hp, 1000)
 
     def get_level(self):
+        if self.lifetime_damage_amount >= 1000:
+            return 2
+
         return 1

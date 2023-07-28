@@ -65,3 +65,5 @@ def test_levels_up_taking_1000_damage_without_dying(alice):
     alice.take_damage(900)
     alice.heal(900)
     alice.take_damage(900)
+
+    # assert alice.get_level() == 2
