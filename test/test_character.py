@@ -37,3 +37,10 @@ def test_character_can_heal(alice):
     alice.heal(10)
 
     assert alice.get_hp() == 910
+
+
+def test_character_cannot_heal_after_dying(alice):
+    alice.take_damage(1000)
+
+    with pytest.raises(DeadCharacterCannotBeHealedException):
+        alice.heal(10)
