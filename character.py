@@ -1,6 +1,8 @@
 ALIVE = 1
 DEAD = 2
 
+MAX_HP = 1000
+
 
 class DeadCharacterCannotBeHealedException(Exception):
     pass
@@ -8,7 +10,7 @@ class DeadCharacterCannotBeHealedException(Exception):
 
 class Character:
     def __init__(self) -> None:
-        self.hp = 1000
+        self.hp = MAX_HP
 
     def get_hp(self):
         return self.hp
