@@ -1,4 +1,4 @@
-import character
+from character import Character
 
 
 def test_something():
